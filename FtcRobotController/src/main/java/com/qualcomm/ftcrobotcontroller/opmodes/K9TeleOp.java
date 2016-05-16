@@ -60,6 +60,8 @@ public class K9TeleOp extends OpMode {
 	// amount to change the arm servo position.
 	double armDelta = 0.1;
 
+	// delta is simply the difference or change in a certain quantity or rate or change
+
 	// position of the claw servo
 	double clawPosition;
 

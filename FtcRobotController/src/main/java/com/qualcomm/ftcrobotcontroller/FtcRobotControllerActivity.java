@@ -68,6 +68,8 @@ import com.qualcomm.robotcore.util.ImmersiveMode;
 import com.qualcomm.robotcore.util.RobotLog;
 import com.qualcomm.robotcore.wifi.WifiDirectAssistant;
 
+import org.warrentechwarriors.ftcrobotcontroller.RobotOpModeRegister;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.Serializable;
@@ -324,7 +326,7 @@ public class FtcRobotControllerActivity extends Activity {
     modernRoboticsFactory.setXmlInputStream(fis);
     factory = modernRoboticsFactory;
 
-    eventLoop = new FtcEventLoop(factory, new FtcOpModeRegister(), callback, this);
+    eventLoop = new FtcEventLoop(factory, new RobotOpModeRegister(), callback, this);
 
     controllerService.setCallback(callback);
     controllerService.setupRobot(eventLoop);
